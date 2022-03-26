@@ -2,6 +2,13 @@
     display: grid;
     grid-template-columns: 3fr 1fr;
 }
+.items-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* padding: 15px 15px 15px 15px; */
+    padding-left: 10px ;
+    gap: 30px;
+}
 
 @media only screen and (max-width: 768px) {
     .shop-container{
