@@ -1,0 +1,10 @@
+.cart-item-container{
+    display: flex;
+    align-items: center;
+}
+.cart-item-container p{
+    padding-left: 5px;
+}
+.cart-item-container img{
+    height: 30px;
+}

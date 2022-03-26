@@ -16,15 +16,19 @@
     margin: 10px;
 }
 .btn-cart{
+    background-color: #321fdb;
+    color: white;
     width: 100%;
     border: 0;
     height: 2rem;
     border-radius: 0 0 20px 20px;
     position: absolute;
-    bottom: 0;
-    
+    bottom: 0;   
+}
+.btn-cart span{
+    padding-right: 10px;
 }
 .btn-cart:hover{
     color: aliceblue;
-    background-color: #321fdb;
+    background-color: deeppink;
 }

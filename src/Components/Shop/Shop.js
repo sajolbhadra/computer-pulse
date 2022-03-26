@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import CartItem from '../CartItem/CartItem';
 import Item from '../Item/Item';
 import './Shop.css'
 
@@ -16,6 +17,9 @@ const Shop = () => {
         const newItem = [...cart, item];
         setCart(newItem);
     }
+    const handleChooseAgain = () => {
+        setCart([])
+    }
     return (
 
         <div className='shop-container'>
@@ -30,7 +34,14 @@ const Shop = () => {
             </div>
             <div className='cart-container'>
                 <h1> This is card</h1>
+                {
+                    cart.map(cart => <CartItem
+                    key={cart.id}
+                    cart={cart}
+                    ></CartItem>)
+                }
                 <p>Picked Items: {cart.length}</p>
+                <button  onClick={handleChooseAgain} >Select Again</button>
             </div>
 
         </div>

@@ -10,7 +10,10 @@
     gap: 10px;
 
 }
-
+.cart-container{
+    position:sticky;
+    background-color: aqua;
+}
 @media screen and (max-width: 768px) {
     .items-container{
         display: flex;
