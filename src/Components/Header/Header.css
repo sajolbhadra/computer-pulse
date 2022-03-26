@@ -1,0 +1,33 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #321fdb;
+    flex-wrap: wrap;
+    
+}
+.nav div{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.nav div a, p{
+    padding-left: 30px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+.nav div a:hover{
+    color: deeppink;
+
+
+}
+
+/* --primary: #321fdb;
+    --secondary: #ced2d8;
+    --success: #2eb85c;
+    --info: #39f;
+    --warning: #f9b115;
+    --danger: #e55353;
+    --light: #ebedef;
+    --dark: #636f83; */
