@@ -2,30 +2,33 @@ import React, { useEffect, useState } from 'react';
 import CartItem from '../CartItem/CartItem';
 import ChooseForMe from '../ChooseForMe/ChooseForMe';
 import Item from '../Item/Item';
+import QA from '../Question&Answer/QA';
 import './Shop.css'
 
 const Shop = () => {
     const [items, setItems] = useState([]);
     const [cart, setCart] = useState([]);
-    const[choose, setChoose] = useState([])
+    const [choose, setChoose] = useState([]);
     useEffect(() => {
         fetch('pcComponents.json')
             .then(res => res.json())
             .then(data => setItems(data))
     }, [])
     const handleCartBtn = (item) => {
-        // console.log(item)
         // if(item === 1)
         const newItem = [...cart, item];
         setCart(newItem);
     }
     const handleChooseAgain = () => {
         setCart([])
+        setChoose([])
     }
     const handleChooseForMe = (cart) => {
-        const random = Math.floor(Math.random()*cart.length) 
-        // console.log(random)
-        setChoose(cart[random])
+        // const random = Math.floor(Math.random() * cart.length)
+        // setChoose(cart[random]);
+        const random = [cart[Math.floor(Math.random() * cart.length)]];
+        setChoose(random);
+        // setCart([])
     }
     return (
 
@@ -51,14 +54,15 @@ const Shop = () => {
                 <p>Picked Items: {cart.length}</p>
                 {
                     choose.map(choose => <ChooseForMe
-                    key={choose.id}
-                    choose={choose}
+                        key={choose.id}
+                        choose={choose}
                     ></ChooseForMe>)
                 }
+                <p>Choosed Items: {choose.length}</p>
                 <button onClick={handleChooseAgain} >Select Again</button>
                 <button onClick={() => handleChooseForMe(cart)} >Choose 1 item For Me</button>
             </div>
-
+                <QA></QA>
         </div>
     );
 };

@@ -3,7 +3,7 @@ import './ChooseForMe.css'
 
 const ChooseForMe = (props) => {
     const {img, name} = props.choose;
-    console.log(props)
+    console.log(props.choose)
     return (
         <div className='choose-item-container'>
             <img src={img} alt="mobo"></img>
