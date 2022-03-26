@@ -1,7 +1,30 @@
-.item div button{
-    width: 100%;
+.item{
+    /* display: flex; */
+    width: 310px;
+    align-items: center;
+    border:  2px solid #e6e6e6;
+    border-radius: 20px;
+    position: relative;
+    min-height: 500px;
 }
 .item img{
     width: 300px;
     height: 250px;
+    border-radius: 20px;
+}
+.item-info{
+    margin: 10px;
+}
+.btn-cart{
+    width: 100%;
+    border: 0;
+    height: 2rem;
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+    bottom: 0;
+    
+}
+.btn-cart:hover{
+    color: aliceblue;
+    background-color: #321fdb;
 }

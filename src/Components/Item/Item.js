@@ -1,18 +1,26 @@
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import './Item.css'
 
 const Item = (props) => {
-    const {category, name, price, img, warrenty, rating } = props.item
-    
+    const { category, name, price, img, warrenty, rating } = props.item
+    const {handleCartBtn} = props;
+ 
+
     return (
         <div className='item'>
-            <img src={img} alt=""/>
-            <h3>Item: {name}</h3>
-            <h3>category: {category}</h3>
-            <h3>Price: {price}</h3>
-            <h3>Warrenty: {warrenty}</h3>
-            <h3>Rating: {rating}</h3>
-            <button>Pick Item</button>
+            <img src={img} alt="" />
+            <div className='item-info'>
+                <h3>Item: {name}</h3>
+                <p>category: {category}</p>
+                <p>Price: {price}</p>
+                <p>Warrenty: {warrenty}</p>
+                <p>Rating: {rating}</p>
+            </div>
+                <button onClick={() => handleCartBtn(props.item)} className='btn-cart'>
+                    <span>Pick Item</span> const element = <FontAwesomeIcon icon={faShoppingCart} />
+                </button>
         </div>
     );
 };
