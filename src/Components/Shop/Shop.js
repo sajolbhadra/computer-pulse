@@ -15,11 +15,11 @@ const Shop = () => {
             .then(data => setItems(data))
     }, [])
     const handleCartBtn = (item) => {
-        if(cart.length <= 3 ){
+        if (cart.length <= 3) {
             const newItem = [...cart, item];
             setCart(newItem);
         }
-        else{
+        else {
             alert('4 Items already selected, Please Refresh Your Page')
         }
     }
@@ -66,7 +66,7 @@ const Shop = () => {
                 <button onClick={handleChooseAgain} >Select Again</button>
                 <button onClick={() => handleChooseForMe(cart)} >Choose 1 item For Me</button>
             </div>
-                <QA></QA>
+            <QA></QA>
         </div>
     );
 };
