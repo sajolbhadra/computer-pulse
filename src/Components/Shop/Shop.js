@@ -15,9 +15,13 @@ const Shop = () => {
             .then(data => setItems(data))
     }, [])
     const handleCartBtn = (item) => {
-        // if(item === 1)
-        const newItem = [...cart, item];
-        setCart(newItem);
+        if(cart.length <= 3 ){
+            const newItem = [...cart, item];
+            setCart(newItem);
+        }
+        else{
+            alert('4 Items already selected, Please Refresh Your Page')
+        }
     }
     const handleChooseAgain = () => {
         setCart([])
