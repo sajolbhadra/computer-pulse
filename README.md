@@ -1,6 +1,6 @@
 # Project Name: Shop BD
 
-# Live Site: https://shop-bd.netlify.app
+### Live Site: https://computer-pulse.netlify.app
 
 * Project Description:
     
